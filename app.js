@@ -8,6 +8,22 @@ var BookRouter = require('./routes/books');
 
 var app = express();
 
+
+// connecting node.js and mongoDB
+var mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost/sample', {useNewUrlParser: true},
+  (err => {
+    err ? console.log("mongoDB not connected") : console.log("mongoDB connected")
+  })
+);
+
+app.set('views', path.join(__dirname,'views'));
+app.set('view engine', 'ejs');
+
+
+
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
