@@ -5,9 +5,11 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var BookRouter = require('./routes/books');
-
+var AuthorRouter = require('./routes/author');
 var app = express();
 
+require('./models/Book');
+require('./models/Author');
 
 // connecting node.js and mongoDB
 var mongoose = require('mongoose');
@@ -32,5 +34,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/books', BookRouter);
+app.use('/authors', AuthorRouter);
 
 module.exports = app;

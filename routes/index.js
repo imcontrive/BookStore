@@ -1,17 +1,24 @@
 var express = require('express');
 var router = express.Router();
 
+
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/new', (req, res)=> {
+// BookForm 
+router.get('/books/new', (req, res)=> {
   res.render('bookForm');
-
-  book.find(err,book => {
+  Book.find(err,book => {
     console.log(books)
   })
+});
+// authorform
+router.get('/authors/new', (req, res)=> {
+  res.render('authorForm');
 });
 
 router.post('/', (req,res,next) => {

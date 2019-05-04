@@ -12,7 +12,6 @@ var bookSchema = mongoose.Schema({
     type: Number,
     default: 0
   },
-  timestamps:true
 })
 
-module.export = mongoose.model('Book',bookSchema);
+module.exports = mongoose.model('Book', bookSchema);

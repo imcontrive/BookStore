@@ -5,13 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Page Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/style.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 <body>
-  <h2 class="heading"><%= title %> </h2>
-  <h3 class="h3">Welcome to express</h3>
-  <h4>
-    
-  </h4>
+  <% authors.forEach(author => { %>
+    <p>Name: <%= author.name %></p>
+    <p>Email: <%= auhtor.email %></p>
+    <p>Age: <%= auhtor.age%></p>
+  <% }) %>
 </body>
 </html>
