@@ -3,8 +3,6 @@ var authorsSchema = mongoose.Schema({
   name: {
     type: String,
     required: [true, "name is required"],
-    unique: true,
-    minLength: 5
   },
   email:{
     type: String,
@@ -14,6 +12,7 @@ var authorsSchema = mongoose.Schema({
     type: Number,
     default: 0
   },
+  books:[{type:mongoose.Schema.Types.ObjectId, ref: 'Book'}]
 })
 
 module.exports = mongoose.model('Author', authorsSchema);

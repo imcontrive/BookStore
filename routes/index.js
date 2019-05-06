@@ -10,12 +10,7 @@ router.get('/', function(req, res, next) {
 });
 
 // BookForm 
-router.get('/books/new', (req, res)=> {
-  res.render('bookForm');
-  Book.find(err,book => {
-    console.log(books)
-  })
-});
+
 // authorform
 router.get('/authors/new', (req, res)=> {
   res.render('authorForm');

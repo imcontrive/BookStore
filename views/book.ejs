@@ -5,13 +5,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Page Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/book.css" />
 </head>
 <body>
-  <% books.forEach(book => { %>
-    <p><%= book.title %></p>
-    <p><%= book.tags %></p>
-    <p><%= book.description %></p>
-  <% }) %>
+  <div class="wrapper">
+    <% books.forEach(book => { %>
+      <div class="book-details">
+        <p>Title:   <%= book.title %></p>
+        <p>tags:    <%= book.tags %></p>
+        <p>Author:    <%= book.author.name %></p>
+        <p>Page No.:<%= book.pages %></p>
+        <p>Desc.:   <%= book.description %></p>
+      </div>
+      <div class="edit-info">
+        <a href="/books/<%= book._id%>/edit ">
+          <!-- <img src="https://image.flaticon.com/icons/png/128/1001/1001371.png"  width="50px" height="50px" alt="edit" > -->
+          Edit:    <i class="fas fa-user-edit"></i>
+        </a>
+        <a href="/books/<%= book._id%>/delete ">
+          <!-- <img src="https://image.flaticon.com/icons/png/128/1001/1001371.png"  width="50px" height="50px" alt="edit" > -->
+          Delete:    <i class="fas fa-trash"></i>
+        </a>
+      </div>
+      <% }) %>
+  </div>
+
 </body>
 </html>

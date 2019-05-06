@@ -6,6 +6,7 @@ var bookSchema = mongoose.Schema({
     unique: true,
     minLength: 5
   },
+  author: {type: mongoose.Schema.Types.ObjectId,  ref: "Author"},
   description: String,
   tags: [String],
   pages:{

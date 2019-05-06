@@ -15,6 +15,14 @@
         <input type="text" name="title" placeholder="Enter title">
       </div>
       <div class="description">
+        <h3>Author</h3>
+        <select name="author">
+        <% authors.forEach(author => { %>
+          <option  value="<%= author._id %>"><%= author.name %></option>
+          <%})%>
+        </select>
+      </div>
+      <div class="description">
         <h3>Description</h3>
         <input type="textarea" name="description" placeholder="description">
       </div>
