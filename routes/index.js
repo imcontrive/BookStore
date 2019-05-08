@@ -10,16 +10,6 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-// BookForm 
 
-
-
-// router.post('/', (req,res,next) => {
-//   Book.create(req.body, (err,books)=>{
-//     console.log(err,books);
-//     res.redirect('/');
-//     if(err) return next(err);
-//   })
-// })
 
 module.exports = router; 
