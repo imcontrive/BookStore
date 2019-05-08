@@ -15,8 +15,9 @@
     <h3>Name:<%= author.name %></h3>
     <h4>Email:<%= author.email %></h4>
     <p>Age: <%= author.age %></p>
-    <h4>Books:<%= author.books %></h4>
-
+    <% author.books.forEach(book => { %>
+      <h1><%= book.title %></h1>
+    <% }) %>
     <div class="edit-info">
       <a href="/authors/<%= author._id%>/edit ">
         <!-- <img src="https://image.flaticon.com/icons/png/128/1001/1001371.png"  width="50px" height="50px" alt="edit" > -->

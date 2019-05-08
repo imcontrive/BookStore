@@ -1,0 +1,12 @@
+.author-wrapper {
+  /* width: 300px; */
+  display: grid;
+ justify-content: center;
+ align-content: center;
+}
+a {
+  text-decoration: none;
+}
+.edit-info a{
+  margin-right: 10px;
+}

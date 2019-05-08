@@ -1,0 +1,22 @@
+body {
+  background: rgba(118, 169, 236, 0);
+}
+
+.book-wrapper {
+  display:grid;
+  grid-template-rows: auto auto auto;
+  
+}
+.book-details {
+  font-size: 20px;
+ max-width: 300px;
+ width: 100%;
+ word-wrap: wrap;
+
+ 
+}
+
+p {
+  letter-spacing: 1px;
+  color:rgb(8, 8, 8);
+}

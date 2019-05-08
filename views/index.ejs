@@ -8,10 +8,14 @@
   <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/style.css" />
 </head>
 <body>
-  <h2 class="heading"><%= title %> </h2>
-  <h3 class="h3">Welcome to express</h3>
-  <h4>
-    
-  </h4>
+  <h2 class="heading">BookStore </h2>
+  <div class="login">
+    <h4>User Login</h4>
+    <form action="/user/login" method="POST">
+        <input type="email"name="email" placeholder="Enter Email">
+        <input type="password" name="password" placeholder="choose a Strong password">
+        <input type="submit" value="login">
+      </form>
+  </div>
 </body>
 </html>

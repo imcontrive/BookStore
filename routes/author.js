@@ -7,11 +7,16 @@ var Author = require('../models/Author');
  
 // Authors
 router.get('/', function(req, res, next) {
-  Author.find({}).populate('books').exec((err, authors) => {
-    // console.log(book, 'this is book in / route');
+  Author.find({}, (err, authors) => {
     if(err) return next(err);
+    console.log(authors,"...............test authors...............")
     res.render('author', {authors: authors});
   })
+});
+
+// authorform
+router.get('/new', (req, res)=> {
+  res.render('authorForm');
 });
 
 router.post('/', (req, res, next) => {
@@ -28,7 +33,7 @@ router.get('/:id', (req, res) => {
   var id = req.params.id;
   Author.findById(id).populate('books').exec((err, author) => {
     if(err) return next(err);
-    console.log(author, 'THis is IT')
+    console.log(author, '........................THis is IT..........................')
     res.render('singleAuthor', {author: author});
   })
 })

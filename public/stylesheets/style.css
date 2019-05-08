@@ -1,7 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-
+  background: rgb(176, 223, 241);
 }
 
 a {
@@ -29,4 +29,44 @@ a:hover {
   color: royalblue;
 }
 
+/* user login */
 
+.heading {
+  text-align: center;
+  font-style: italic;
+  font-size: 40px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+.login {
+  width: 200px;
+  margin: 0 auto;
+  background: rgb(127, 209, 241);
+  padding: 10px;
+}
+.login h4 {
+  text-align: center;
+  font-size: 20px;
+}
+.login h6 {
+  text-align: center;
+  margin: 0;
+  padding: 1px 3px;
+}
+.login h3 p {
+  padding-bottom: 3px;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-family: serif;
+}
+.login a {
+  text-decoration: none;
+  background-color:#d93025;
+  font-size: 13px;
+  padding: 2px 6px;
+  color:#ffffff;
+  border-radius: 8px;
+}
+.login a:hover {
+  color:black;
+}
