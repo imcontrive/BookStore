@@ -44,13 +44,10 @@ router.post("/login", (req,res,next) => {
     if(err) return next(err);
     if(!user) return res.status(400).redirect("/");
     console.log(!user.validatePassword(password),"fghjksedcfgvbhnjkdxcfvgbh");
-    if(!user.validatePassword(password)) return res.status(400).redirect('/');
+    if(!user.validatePassword(password)) return res.status(400).redirect('/users');
     req.session.userId = user._id;
     res.status(200).redirect('/');
   })
 })
-
-
-
 
 module.exports = router;
